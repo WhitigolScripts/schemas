@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DefineConfigOptions",
+  "type": "object",
+  "properties": {
+    "outDir": {
+      "type": "string"
+    },
+    "outOverride": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          }
+        },
+        "required": ["from", "to"]
+      }
+    },
+    "obfuscate": {
+      "type": "boolean"
+    },
+    "minify": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}
