@@ -1,0 +1,268 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "menu": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "subtitle": {
+                    "type": "string"
+                },
+                "menuKey": {
+                    "type": "number"
+                },
+                "departments": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "department": {
+                                "type": "string"
+                            },
+                            "uniforms": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "props": {
+                                            "type": "object",
+                                            "properties": {
+                                                "hats": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "slot": {
+                                                            "type": "number"
+                                                        },
+                                                        "texture": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "slot",
+                                                        "texture"
+                                                    ]
+                                                },
+                                                "glasses": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "slot": {
+                                                            "type": "number"
+                                                        },
+                                                        "texture": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "slot",
+                                                        "texture"
+                                                    ]
+                                                },
+                                                "watch": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "slot": {
+                                                            "type": "number"
+                                                        },
+                                                        "texture": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "slot",
+                                                        "texture"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "hats",
+                                                "glasses",
+                                                "watch"
+                                            ]
+                                        },
+                                        "components": {
+                                            "type": "object",
+                                            "properties": {
+                                                "mask": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "slot": {
+                                                            "type": "number"
+                                                        },
+                                                        "texture": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "slot",
+                                                        "texture"
+                                                    ]
+                                                },
+                                                "upperbody": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "slot": {
+                                                            "type": "number"
+                                                        },
+                                                        "texture": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "slot",
+                                                        "texture"
+                                                    ]
+                                                },
+                                                "legs": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "slot": {
+                                                            "type": "number"
+                                                        },
+                                                        "texture": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "slot",
+                                                        "texture"
+                                                    ]
+                                                },
+                                                "bags": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "slot": {
+                                                            "type": "number"
+                                                        },
+                                                        "texture": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "slot",
+                                                        "texture"
+                                                    ]
+                                                },
+                                                "shoes": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "slot": {
+                                                            "type": "number"
+                                                        },
+                                                        "texture": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "slot",
+                                                        "texture"
+                                                    ]
+                                                },
+                                                "neck": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "slot": {
+                                                            "type": "number"
+                                                        },
+                                                        "texture": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "slot",
+                                                        "texture"
+                                                    ]
+                                                },
+                                                "shirt": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "slot": {
+                                                            "type": "number"
+                                                        },
+                                                        "texture": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "slot",
+                                                        "texture"
+                                                    ]
+                                                },
+                                                "bodyarmor": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "slot": {
+                                                            "type": "number"
+                                                        },
+                                                        "texture": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "slot",
+                                                        "texture"
+                                                    ]
+                                                },
+                                                "badges": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "slot": {
+                                                            "type": "number"
+                                                        },
+                                                        "texture": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "slot",
+                                                        "texture"
+                                                    ]
+                                                },
+                                                "jackets": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "slot": {
+                                                            "type": "number"
+                                                        },
+                                                        "texture": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "slot",
+                                                        "texture"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "mask",
+                                                "upperbody",
+                                                "legs",
+                                                "bags",
+                                                "shoes",
+                                                "neck",
+                                                "shirt",
+                                                "bodyarmor",
+                                                "badges",
+                                                "jackets"
+                                            ]
+                                        }
+                                    },
+                                    "required": ["name", "props", "components"]
+                                }
+                            }
+                        },
+                        "required": ["department", "uniforms"]
+                    }
+                }
+            },
+            "required": ["title", "subtitle", "menuKey", "departments"]
+        }
+    },
+    "required": ["menu"]
+}
