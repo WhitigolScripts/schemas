@@ -1,0 +1,128 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "Defaults": {
+            "type": "object",
+            "properties": {
+                "Keybind": {
+                    "type": "string",
+                    "description": "The keybind to open the menu."
+                },
+                "Command": {
+                    "type": "string",
+                    "description": "The command to open the menu."
+                }
+            },
+            "required": ["Command"]
+        },
+        "EventWatcher": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "eventName": {
+                        "type": "string",
+                        "description": "The event name to watch for."
+                    },
+                    "logLevel": {
+                        "type": "string",
+                        "description": "The log level to use for this event.",
+                        "enum": ["SUCCESS", "INFO", "WARN", "ERROR"]
+                    }
+                },
+                "required": ["eventName", "logLevel"]
+            }
+        },
+        "timestamp": {
+            "type": "boolean",
+            "description": "Whether or not to include a timestamp in the log messages."
+        },
+        "SendToDiscord": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean",
+                    "description": "Whether or not to send log messages to Discord."
+                },
+                "WebHookURL": {
+                    "type": "string",
+                    "description": "The webhook URL to send messages to."
+                },
+                "level": {
+                    "type": "string",
+                    "description": "The log level to use for this event.",
+                    "enum": ["SUCCESS", "INFO", "WARN", "ERROR"]
+                }
+            },
+            "required": ["enabled", "WebHookURL", "level"]
+        },
+        "SafeRestart": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean",
+                    "description": "Whether or not to enable the safe restart feature."
+                },
+                "warnTime": {
+                    "type": "integer",
+                    "description": "The amount of time to warn players before restarting."
+                },
+                "lagTime": {
+                    "type": "integer",
+                    "description": "The amount of time to wait for players to leave before restarting."
+                }
+            },
+            "required": ["enabled", "warnTime", "lagTime"]
+        },
+        "Permissions": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean",
+                    "description": "Whether or not to enable the permissions system."
+                },
+                "groups": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "group": {
+                                "type": "string",
+                                "description": "The group name."
+                            },
+                            "permissions": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "enum": [
+                                        "OpenMenu",
+                                        "SafeRestart",
+                                        "EntityViewer",
+                                        "ResourceManager",
+                                        "CodeExecuter",
+                                        "OneSyncBlip",
+                                        "GameModifier",
+                                        "CoordsTool",
+                                        "ResourceExplorer"
+                                    ],
+                                    "description": "The permissions for this group."
+                                }
+                            }
+                        },
+                        "required": ["group", "permissions"]
+                    }
+                }
+            },
+            "required": ["enabled", "groups"]
+        }
+    },
+    "required": [
+        "Defaults",
+        "EventWatcher",
+        "timestamp",
+        "SendToDiscord",
+        "SafeRestart",
+        "Permissions"
+    ]
+}
