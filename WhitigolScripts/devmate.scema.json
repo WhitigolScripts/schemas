@@ -60,10 +60,6 @@
         "SafeRestart": {
             "type": "object",
             "properties": {
-                "enabled": {
-                    "type": "boolean",
-                    "description": "Whether or not to enable the safe restart feature."
-                },
                 "warnTime": {
                     "type": "integer",
                     "description": "The amount of time to warn players before restarting."
@@ -73,7 +69,7 @@
                     "description": "The amount of time to wait for players to leave before restarting."
                 }
             },
-            "required": ["enabled", "warnTime", "lagTime"]
+            "required": ["warnTime", "lagTime"]
         },
         "Permissions": {
             "type": "object",
@@ -97,7 +93,6 @@
                                     "type": "string",
                                     "enum": [
                                         "OpenMenu",
-                                        "SafeRestart",
                                         "EntityViewer",
                                         "ResourceManager",
                                         "CodeExecuter",
